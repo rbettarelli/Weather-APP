@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <script src="https://kit.fontawesome.com/d507937b83.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+
+      <section class="formSection">
+        <form id="searchForm" novalidate>
+          <input
+            type="text"
+            placeholder="City Name"
+            id="searchInput"
+          />
+          <span id="searchButton" type="submit" form="searchForm"><i class="fa-solid fa-magnifying-glass"></i></span>
+        </form>
+      </section>
+    
+      <div class="current-info">
+        <div class="infoRight">
+          <img id="icon" alt="" />
+          <div class="currentTemp1">
+            <p id="cityName"></p>
+            <p id="description"></p>
+          </div>
+        </div>
+        <div class="infoLeft">
+          <p id="temperature"></p>
+          <p id="humidity"></p>
+        </div>
+      </div>
+    
+      <div class="forecasts">
+    
+          
+    
+        <div class="forecastDailyContainer"></div>
+        <h2 class="titleHour">Next 12 Hours</h2>
+        <div class="forecastHourContainer"></div>
+    
+    
+      </div>
+      <footer id='footer'>
+        <p>
+          Copyright ©
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+        </p>
+        <a href="https://github.com/rbettarelli">
+          rbettarelli
+          <i class="fab fa-github"></i
+        ></a>
+      </footer>
+     
+    </div>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>

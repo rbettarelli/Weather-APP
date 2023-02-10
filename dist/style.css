@@ -1,0 +1,247 @@
+body {
+  margin: 0;
+  font-family: "Assistant", sans-serif;
+}
+
+.container {
+  display: none;
+}
+
+.formSection {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.current-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  padding-bottom: 50px;
+}
+.current-info .infoRight {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+.current-info #icon {
+  width: 130px;
+  height: 130px;
+  padding-right: 20px;
+  align-items: center;
+}
+.current-info #description {
+  font-weight: bold;
+  font-size: 18px;
+  min-width: 106px;
+}
+.current-info #cityName {
+  font-weight: bolder;
+  font-size: 25px;
+  min-width: 106px;
+}
+.current-info #temperature {
+  font-size: 30px;
+  font-weight: bolder;
+  margin-bottom: 0;
+  min-width: 106px;
+}
+.current-info #humidity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  margin-top: 0;
+  padding-top: 15px;
+  font-weight: bold;
+  min-width: 106px;
+}
+
+.forecastHourContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border-bottom: 2px solid black;
+  margin-bottom: 30px;
+}
+
+.hourForecastItem {
+  border-top: 2px solid black;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  height: 50px;
+  width: 100%;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.hourForecastItem img {
+  width: 50px;
+  height: 50px;
+}
+.hourForecastItem .hourlyTemp {
+  font-size: 1.125rem;
+  font-weight: 1000;
+}
+.hourForecastItem .hourlyTime {
+  font-weight: bolder;
+}
+.hourForecastItem .feelsLike {
+  width: 100px;
+  height: 25px;
+  margin: 0;
+  padding-top: 5px;
+}
+.hourForecastItem .feelsLike .labelFeelsLike {
+  margin: 0;
+}
+.hourForecastItem .feelsLike .hourlyFeelsLike,
+.hourForecastItem .feelsLike .labelFeelsLike {
+  margin: 0;
+  font-weight: 800;
+}
+.hourForecastItem .hourlyDescription {
+  margin: 0;
+  width: 60px;
+  font-weight: 800;
+}
+.hourForecastItem .hourlyDescription .hourlyDescriptionValue {
+  margin: 0;
+  height: 25px;
+  padding-top: 8px;
+}
+.hourForecastItem .windSpeed {
+  width: 100px;
+  height: 25px;
+  margin: 0;
+  padding-top: 5px;
+  font-weight: 800;
+}
+.hourForecastItem .windSpeed .hourlyWindSpeed {
+  margin: 0;
+}
+.hourForecastItem .windSpeed .labelWindSpeed {
+  margin: 0;
+}
+
+.forecastDailyContainer {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+  max-width: 950px;
+  margin: 0 auto;
+  gap: 5px;
+  padding-bottom: 25px;
+}
+.forecastDailyContainer .forecastDailyItem {
+  display: flex;
+  margin: 0;
+  height: 250px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: auto;
+  border: 2px solid gray;
+}
+.forecastDailyContainer .forecastDailyItem .numberDay {
+  margin: 0;
+  font-weight: bold;
+}
+.forecastDailyContainer .forecastDailyItem .dailyWeekday {
+  margin: 0;
+  font-weight: bold;
+}
+.forecastDailyContainer .forecastDailyItem .dailyDescription {
+  margin: 0;
+  padding-bottom: 8px;
+  font-weight: bold;
+}
+.forecastDailyContainer .forecastDailyItem .dailyMax {
+  margin: 0;
+  font-weight: bold;
+}
+.forecastDailyContainer .forecastDailyItem .dailyMin {
+  margin: 0;
+  font-weight: bold;
+}
+.forecastDailyContainer .forecastDailyItem .icon {
+  margin: 0;
+  padding-bottom: 4px;
+}
+
+@media only screen and (max-width: 965px) {
+  .forecastDailyContainer {
+    grid-template-columns: repeat(4, 1fr);
+    width: 475px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .forecastDailyContainer {
+    grid-template-columns: repeat(3, 1fr);
+    width: 316px;
+  }
+}
+@media only screen and (max-width: 390px) {
+  .forecastDailyContainer {
+    grid-template-columns: repeat(2, 1fr);
+    width: 237px;
+  }
+}
+.titleHour {
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: 60px;
+  background-color: lightgray;
+}
+footer p {
+  padding-top: 20px;
+  padding-bottom: 17px;
+}
+footer a {
+  text-decoration: none;
+}
+
+.fa-github {
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
+input[type=text] {
+  background-color: lightgray;
+  border: none;
+  height: 40px;
+  width: 200px;
+  border-radius: 20px;
+  text-indent: 60px;
+}
+
+span {
+  padding-left: 15px;
+}
+
+.fa-solid:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
